@@ -253,7 +253,7 @@ $ python topic_interpretability/ComputeWordCount.py 20news.vocab.txt.oneline \
     20news_train_test_raws > 20news.train.test.wc
 ```
 
-If you want to use `Wikipedia` as a ground corpus, it is better than the directory that contains many small (1000 documents, one per line) files.
+If you plan to use `Wikipedia` as a ground corpus, you can speed up this step by deviding `Wikipedia` corpus into many small files, each file contains around 1000 Wikipedia articles (each article must be in a new line) to take advantage of the fact that `ComputeWordCount.py` processes these files in parallel.
 
 Prepare topics:
 
